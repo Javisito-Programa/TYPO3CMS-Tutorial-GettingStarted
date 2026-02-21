@@ -148,8 +148,8 @@ pubspec.yaml                # Dependencies and Flutter config
 
 ## 👏 Credits
 
-- **Animation Creator:** [Creator's Name]  
-- **Original Animation Link:** [Link to original animation]  
+- **Animation Creator:** [dexterc]  
+- **Original Animation Link:** [https://rive.app/marketplace/3645-7621-remix-of-login-machine/]  
 
 ---
 
