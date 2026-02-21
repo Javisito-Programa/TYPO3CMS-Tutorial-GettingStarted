@@ -9,8 +9,8 @@ The project demonstrates how to integrate **Rive animations** with Flutter using
 
 ## 🎓 Academic Information
 
-- **Course Name:** [Course Name]  
-- **Teacher's Name:** [Teacher's Name]  
+- **Course Name:** [Graphication]  
+- **Teacher's Name:** [Rodrigo Fidel Gaxiola Sosa]  
 
 ---
 
@@ -73,7 +73,7 @@ The animation reacts dynamically depending on user focus, typing behavior, and l
 dependencies:
   flutter:
     sdk: flutter
-  rive: ^0.10.0
+  rive: ^0.13.2
 ```
 
 Rive animation file:  
