@@ -1,65 +1,156 @@
-# 🐻 Interactive Animated Login | Flutter & Rive
+# 🐻 Animated Bear Login
 
-An engaging and interactive login screen built with Flutter, featuring a dynamic bear character that reacts to user input in real-time using Rive animations and State Machines.
+Welcome to the **Animated Bear Login** project!  
+This is an **interactive Flutter login screen** with a cute bear character that reacts to your input.
 
-## 🚀 Key Functionalities
+The project demonstrates how to integrate **Rive animations** with Flutter using a **State Machine** to create dynamic and responsive UI interactions.
 
-This project demonstrates a high-level integration between UI components and vector animations:
-
-- 👀 **Dynamic Gaze:** The bear follows the cursor and tracks the text length while the user is typing in the Email field using the `isChecking` input.
-- 🙈 **Privacy Mode:** When the Password field is focused or tapped, the bear covers its eyes using the `isHandsUp` boolean state.
-- 👁️ **Peek Feature:** Toggling the password visibility (eye icon) programmatically lowers the bear's hands so it can "peek" while the user checks their password.
-- ⚡ **State Machine Management:** Real-time control of animations via `StateMachineController`, connecting Flutter's `FocusNodes` with Rive's internal logic.
-- 🛠️ **Memory Management:** Efficient handling of resources by disposing of `FocusNodes` to prevent memory leaks.
-
-## 🎨 What is Rive & State Machine?
-
-### Rive
-
-Rive is a real-time interactive design and animation tool. Unlike traditional video or GIF formats, Rive animations are functional code, allowing them to be manipulated dynamically, resulting in tiny file sizes and high performance.
-
-### State Machine
-
-The State Machine is the "brain" of the animation. In this project, the `Login Machine` manages:
-
-- **SMI (State Machine Inputs):** Variables like `isChecking` (bool), `isHandsUp` (bool), `trigSuccess` (trigger), and `trigFail` (trigger) that allow the Flutter code to change the animation state instantly.
-
-## 🛠️ Technologies
-
-- **Framework:** Flutter 🚀
-- **Language:** Dart 🎯
-- **Animation Engine:** Rive Runtime 🎬
-
-## 📂 Project Structure
-
-The main logic is organized as follows:
-
-```
-lib/
-├── main.dart              # Entry point of the app
-└── login_screen.dart      # Main UI and State Machine logic
-assets/
-└── animated_login_bear.riv # Teddy's animation source file
-```
-
-## 🎬 Demo
-
-> Note: Upload a GIF of your app to your repository and replace the link above to show the animation in action!
+---
 
 ## 🎓 Academic Information
 
-- **Subject:** \[Insert Subject Name Here\] 📚
-- **Professor:** \[Insert Professor Name Here\] 👨‍🏫
+- **Course Name:** [Course Name]  
+- **Teacher's Name:** [Teacher's Name]  
 
-## 📜 Credits
+---
 
-The character animation used in this project is the famous Teddy from the Rive community.
+## ✨ Features
 
-- **Original Creator:** Rive Community - Teddy 👏
+- 👀 **Eye-tracking:** The bear follows your email input with its eyes.  
+- 🙈 **Privacy mode:** The bear covers its eyes when typing the password.  
+- 😁 **Happy bear:** Appears when login credentials are correct ( Admin@gmail.com / Admin12345 ).  
+- 😢 **Sad bear:** Appears when login credentials are incorrect.  
+- 🎨 Smooth animations powered by **Rive**.  
 
-## ⚙️ How to use
+---
 
-1. Add the `rive` dependency to your `pubspec.yaml`.
-2. Ensure `animated_login_bear.riv` is declared in your assets section.
-3. Run `flutter pub get`.
-4. Run the project on your emulator or physical device.
+## 📚 Theory
+
+### 🎨 What is Rive?
+
+**Rive** is a real-time interactive animation tool that allows developers and designers to create state-driven animations.  
+Unlike traditional static animations, Rive animations can react dynamically to user input through code.
+
+In this project, Rive is used to animate the bear character and control its reactions based on user interactions in the login form.
+
+---
+
+### 🔄 What is a State Machine?
+
+A **State Machine** is a logic system that transitions between different animation states depending on input values.
+
+In this project, the Rive State Machine (`Login Machine`) contains inputs such as:
+
+- `isChecking` → Controls whether the bear looks at the email field.
+- `isHandsUp` → Controls whether the bear covers its eyes.
+- `trigSuccess` → Triggers the happy animation.
+- `trigFail` → Triggers the sad animation.
+
+These inputs are connected in Flutter using:
+
+- `SMIBool` → Boolean inputs (true/false states)
+- `SMITrigger` → Event-based triggers
+
+The animation reacts dynamically depending on user focus, typing behavior, and login validation.
+
+---
+
+## 🛠 Technologies
+
+- 💙 Flutter 3.x
+- 🎯 Dart 3.x
+- 🎨 Rive
+
+---
+
+## 🧰 Requirements
+
+- Flutter 3.x or higher  
+- Dart 3.x  
+- Rive package:
+
+```yaml
+dependencies:
+  flutter:
+    sdk: flutter
+  rive: ^0.10.0
+```
+
+Rive animation file:  
+`assets/animated_login_character.riv` with state machine **Login Machine**.
+
+---
+
+## 🚀 Installation
+
+### 1- Clone the repository:
+
+```bash
+git clone <your_project_url>
+```
+
+### 2- Navigate to the project folder:
+
+```bash
+cd flutter_application_1
+```
+
+### 3- Install dependencies:
+
+```bash
+flutter pub get
+```
+
+### 4- Run the project:
+
+```bash
+flutter run
+```
+
+---
+
+## 🎮 Usage
+
+Enter your email  
+
+The bear will follow your typing with its eyes.
+
+Enter your password  
+
+The bear automatically covers its eyes.
+
+Press Login  
+
+✅ Correct credentials ( Admin@gmail.com / Admin12345 ) → Bear becomes happy  
+
+❌ Wrong credentials → Bear becomes sad  
+
+---
+
+## 📁 Project Structure
+
+```
+lib/
+├── main.dart               # Entry point
+├── login_screen.dart       # Login screen with Rive animation
+assets/
+├── animated_login_character.riv   # Bear animation file
+pubspec.yaml                # Dependencies and Flutter config
+```
+
+---
+
+## 🎥 DEMO
+
+![Demo](link_to_your_gif.gif)
+
+---
+
+## 👏 Credits
+
+- **Animation Creator:** [Creator's Name]  
+- **Original Animation Link:** [Link to original animation]  
+
+---
+
+💡 This project is designed for educational purposes to demonstrate Flutter + Rive integration using State Machines for interactive UI experiences.
